@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <title>pesquisa viaCep</title>
+    <Header>
+        <img src="imagens/pino-de-localizacao.png">
+    </Header>
+    <h1 class="topwrite"> BUSCA CEP</h1>
+</head>
+
+<body onload="mudarEstado();">
+    <div class="form-cep">
+        <input type="text" id="cep" placeholder="Digite o CEP" pattern="\([0-7]{2}\)[\s][0-9]{4}-[0-9]{4,5}">
+        <button onclick="buscarEndereco()">BUSCAR ENDERECO</button>
+        <span class="result" id="mensagem"></span>
+    </div>
+    <button class="limpar-campos" onclick="limparCampos()">Limpar Campos</button>
+    <div class="form-endereco">
+
+        <select name="estado" id="estado"> </select>
+        <input type="text" id="cidade" placeholder="Digite a cidade">
+        <input type="text" id="logradouro" placeholder="Digite o logradouro ">
+        <button onclick="buscarCep()">BUSCAR CEP</button>
+        <span class="result" id="mensagem-cep"></span>
+
+    </div>
+    <div class="historico-container">
+        <h1>Histórico</h1>
+       
+        <ul id="historico"></ul>
+        <button class="limpah" onclick="limparHistorico()">Limpar Histórico</button>
+        <h1 class="result" id="exibicao-historico"></h1>
+       
+          
+       
+        
+    </div>
+</body>
+<footer>
+    
+    <p>Henrique Ascêncio Batalha, Olívia Freitas de souza, Samuel dos Santos Leite, Victor Geovanne Moura Santos
+        Carvalho</p>
+</footer>
+
+</html>
